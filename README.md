@@ -2,7 +2,7 @@
 
 ## Read as following
 
-`Insided dep learning with python francois`
+`Inside deep learning with python francois`
 
 **1**. first_training_keras_mnist_data.ipynb
 
