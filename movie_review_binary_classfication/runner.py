@@ -11,6 +11,7 @@ from keras.datasets import imdb
 from keras import models
 from keras import layers
 import numpy as np
+import matplotlib.pyplot as plt
 
 # num words means we will only keep the top 10000 most frequently
 # occuring words in the training data. Rare words will be discarded
@@ -104,6 +105,51 @@ def create_model_definition(x_val, partial_x_train, y_val, partial_y_train):
     return history
 
 
+def plot_loss(history, epochs, plt):
+    history_dict = history.history
+    loss_values = history_dict.get("loss")
+    val_loss_values = history_dict.get("val_loss")
+
+    epochs_to_plot = range(1, epochs + 1)
+    plt.plot(epochs_to_plot, loss_values, "bo", label="Training Loss")
+    plt.plot(epochs_to_plot, val_loss_values, "b", label="Validation Loss")
+    plt.title("Training and Validation Loss")
+    plt.xlabel("Epochs")
+    plt.ylabel("Loss")
+    plt.legend()
+
+
+def plot_accuracy(history, epochs, plt):
+    history_dict = history.history
+    acc_values = history_dict.get("accuracy")
+    val_acc_values = history_dict.get("val_accuracy")
+
+    epochs_to_plot = range(1, epochs + 1)
+    plt.plot(epochs_to_plot, acc_values, "bo", label="Training Accuracy")
+    plt.plot(epochs_to_plot, val_acc_values, "b", label="Validation Accuracy")
+    plt.title("Training and Validation Accuracy")
+    plt.xlabel("Epochs")
+    plt.ylabel("Accuracy")
+    plt.legend()
+
+
+def calculate_result_of_model(model, x_train, x_test):
+    """[summary]
+
+    Parameters
+    ----------
+    model : [type]
+        [description]
+    x_train : [type]
+        [description]
+    x_test : [type]
+        [description]
+    """
+
+    results = model.evaluate(x_test, y_test)
+    return results
+
+
 if __name__ == "__main__":
     from numba import cuda
 
@@ -117,6 +163,6 @@ if __name__ == "__main__":
     x_val, partial_x_train, y_val, partial_y_train = create_train_val_set(
         x_train, y_train
     )
-    print("Y" * 100)
-    print(x_val)
     history = create_model_definition(x_val, partial_x_train, y_val, partial_y_train)
+    # plot_loss(history, 20, plt)
+    # plot_accuracy(history, 20, plt)
