@@ -1,0 +1,30 @@
+{
+    "python.pythonPath": "C:\\Users\\142935\\Anaconda3\\envs\\ds\\python.exe",
+    "python.linting.pylintargs":[
+        "--extension-pkg-whitelist=PyQt5"
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.mypyEnabled": false,
+    "python.linting.enabled": true,
+    "fileheader.Author": "abhinav.mazumdar",
+    "fileheader.LastModifiedBy": "abhinav.mazumdar",
+    "editor.quickSuggestionsDelay": 1,
+    "python.autoComplete.extraPaths": [
+    
+    ],
+    "python.jediEnabled": false,
+    "python.languageServer": "Microsoft",
+    "cSpell.words": [
+        "abhinav",
+        "asarray",
+        "imdb",
+        "keras",
+        "mazumdar"
+    ],
+    "python.linting.flake8Args": [
+        "--max-line-length=120",
+    ],
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+}
