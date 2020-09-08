@@ -11,7 +11,8 @@ from keras.datasets import imdb
 from keras import models
 from keras import layers
 import numpy as np
-import matplotlib.pyplot as plt
+
+# import matplotlib.pyplot as plt
 
 # num words means we will only keep the top 10000 most frequently
 # occuring words in the training data. Rare words will be discarded

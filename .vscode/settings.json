@@ -1,6 +1,6 @@
 {
     "python.pythonPath": "C:\\Users\\142935\\Anaconda3\\envs\\ds\\python.exe",
-    "python.linting.pylintargs":[
+    "python.linting.pylintargs": [
         "--extension-pkg-whitelist=PyQt5"
     ],
     "python.linting.flake8Enabled": true,
@@ -10,9 +10,7 @@
     "fileheader.Author": "abhinav.mazumdar",
     "fileheader.LastModifiedBy": "abhinav.mazumdar",
     "editor.quickSuggestionsDelay": 1,
-    "python.autoComplete.extraPaths": [
-    
-    ],
+    "python.autoComplete.extraPaths": [],
     "python.jediEnabled": false,
     "python.languageServer": "Microsoft",
     "cSpell.words": [
@@ -27,4 +25,11 @@
     ],
     "python.formatting.provider": "black",
     "editor.formatOnSave": true,
+    "cSpell.diagnosticLevel": "Hint",
+    "workbench.colorCustomizations": {
+        // will change the color of three dots to red
+        "editorHint.foreground": "#ff0000",
+        // will underline the entire word with dots in your chosen color
+        "editorHint.border": "#00ff66"
+    },
 }

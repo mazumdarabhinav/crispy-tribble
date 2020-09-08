@@ -78,7 +78,7 @@ def get_prepared_data(train_data, train_labels, test_data, test_labels):
 
     # one_hot_train_labels = to_one_hot_labels(train_labels)
     # one_hot_test_labels = to_one_hot_labels(test_labels)
-    ## Instead of using our own custom one hot  (to_one_hot_labels), we can use the built in keras function to do it
+    # Instead of using our own custom one hot  (to_one_hot_labels), we can use the built in keras function to do it
     one_hot_train_labels = to_categorical(train_labels)
     one_hot_test_labels = to_categorical(test_labels)
     return (x_train, one_hot_train_labels, x_test, one_hot_test_labels)
